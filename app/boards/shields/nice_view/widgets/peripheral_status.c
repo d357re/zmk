@@ -34,16 +34,15 @@ LV_IMG_DECLARE(kronii_008)
 LV_IMG_DECLARE(kronii_009)
 LV_IMG_DECLARE(kronii_010)
 
-LV_IMG_DECLARE(marine_001)
-LV_IMG_DECLARE(marine_002)
-LV_IMG_DECLARE(marine_003)
-LV_IMG_DECLARE(marine_004)
-LV_IMG_DECLARE(marine_005)
-LV_IMG_DECLARE(marine_006)
-LV_IMG_DECLARE(marine_007)
-LV_IMG_DECLARE(marine_008)
-LV_IMG_DECLARE(marine_009)
-LV_IMG_DECLARE(marine_010)
+#LV_IMG_DECLARE(marine_001)
+#LV_IMG_DECLARE(marine_002)
+#LV_IMG_DECLARE(marine_003)
+#LV_IMG_DECLARE(marine_004)
+#LV_IMG_DECLARE(marine_005)
+#LV_IMG_DECLARE(marine_006)
+#LV_IMG_DECLARE(marine_008)
+#LV_IMG_DECLARE(marine_009)
+#LV_IMG_DECLARE(marine_010)
 
 const struct Animation kronii_anim = {.frameCount = 10,
                                       .timeGap = 100,
@@ -52,7 +51,7 @@ const struct Animation kronii_anim = {.frameCount = 10,
                                                  &kronii_005, &kronii_006, &kronii_007, &kronii_008,
                                                  &kronii_009, &kronii_010}};
 
-const struct Animation marine_anim = {.frameCount = 10,
+#const struct Animation marine_anim = {.frameCount = 10,
                                       .timeGap = 100,
                                       .repetition = 10,
                                       .images = {&marine_001, &marine_002, &marine_003, &marine_004,
@@ -61,7 +60,7 @@ const struct Animation marine_anim = {.frameCount = 10,
 
 int currentAnimIdx = 0;
 int animsLength = 2;
-const struct Animation *anims[] = {&kronii_anim, &marine_anim};
+const struct Animation *anims[] = {&kronii_anim};
 
 static sys_slist_t widgets = SYS_SLIST_STATIC_INIT(&widgets);
 struct peripheral_status_state {
